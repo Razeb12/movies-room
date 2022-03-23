@@ -34,6 +34,7 @@ const Home = () => {
                     </div>
                     <MovieList category={category.movie} type={movieType.top_rated}/>
                 </div>
+                
 
                 <div className="section mb-3">
                     <div className="section__header mb-2">
