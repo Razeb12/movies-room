@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 
 
@@ -6,27 +7,27 @@ import './header.scss';
 
 import logo from '../../assets/Logo.png';
 
-// const headerNav = [
-//     {
-//         display: 'Home',
-//         path: '/'
-//     },
-//     {
-//         display: 'Movies',
-//         path: '/movie'
-//     },
-//     {
-//         display: 'TV Series',
-//         path: '/tv'
-//     }
-// ];
+const headerNav = [
+    {
+        display: 'Home',
+        path: '/'
+    },
+    {
+        display: 'Movies',
+        path: '/movie'
+    },
+    {
+        display: 'TV Series',
+        path: '/tv'
+    }
+];
 
 const Header = () => {
 
-    // const { pathname } = useLocation();
+    const { pathname } = useLocation();
     const headerRef = useRef(null);
 
-    // const active = headerNav.findIndex(e => e.path === pathname);
+    const active = headerNav.findIndex(e => e.path === pathname);
 
     useEffect(() => {
         const shrinkHeader = () => {
@@ -49,7 +50,7 @@ const Header = () => {
                     <img src={logo} alt="" />
                 
                 </div>
-                {/* <ul className="header__nav">
+                <ul className="header__nav">
                     {
                         headerNav.map((e, i) => (
                             <li key={i} className={`${i === active ? 'active' : ''}`}>
@@ -59,7 +60,7 @@ const Header = () => {
                             </li>
                         ))
                     }
-                </ul> */}
+                </ul>
             </div>
         </div>
     );
