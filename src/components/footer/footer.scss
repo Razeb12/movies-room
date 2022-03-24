@@ -9,6 +9,7 @@
 
     &__content {
         max-width: 1000px;
+        color: white;
 
         &__logo {
             @include flex(center, center);

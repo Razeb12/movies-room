@@ -20,14 +20,16 @@ html {
         font-size: 60%;
     }
 }
-
+.small{
+    color: black;
+}
 body {
     font-family: $font-family;
     font-weight: 400;
     line-height: 1.5;
 
     background-color: $body-bg;
-    color: $txt-color;
+    // color: $txt-color;
 
     @include mobile {
         margin-bottom: 3rem;

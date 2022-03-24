@@ -15,12 +15,14 @@
             width: 150px;
             padding: 1rem 2rem;
         }
+        
     }
 }
 
 .header {
     height: $header-height;
     position: fixed;
+    color: white;
     top: 0;
     left: 0;
     width: 100%;

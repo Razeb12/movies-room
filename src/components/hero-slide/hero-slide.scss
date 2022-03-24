@@ -53,6 +53,7 @@
                 font-size: 5rem;
                 font-weight: 700;
                 line-height: 1;
+                color: white;
 
                 @include tablet {
                     font-size: 4rem;
@@ -61,6 +62,7 @@
 
             .overview {
                 font-weight: 700;
+                color: white;
             }
 
             .btns > * ~ * {
