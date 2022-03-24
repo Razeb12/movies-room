@@ -5,13 +5,14 @@
 
     @include flex(center, unset);
 
-    img {
+    img {display: none;
         margin-right: 10px;
         width: 150px;
 
         @include mobile {
-            width: 80px;
-            margin-right: 0;
+            display: block;
+            width: 150px;
+            padding: 1rem 2rem;
         }
     }
 }
@@ -32,7 +33,7 @@
     }
 
     &__wrap {
-        @include flex(center, space-between);
+        @include flex(center, center);
         height: 100%;
         padding: 0 2rem;
 
@@ -43,13 +44,17 @@
 
     &__nav {
         @include flex(center, unset);
+        
 
         & > * ~ * {
             margin-left: 2rem;
+            
+            
         }
 
         li {
-            padding: 5px 0;
+            padding: 10px 30px;
+          
             font-weight: 700;
             position: relative;
             font-size: 1.5rem;
@@ -62,7 +67,7 @@
                 transform: translateX(-50%);
                 width: 0;
                 transition: width 0.5s ease;
-                height: 2px;
+                height: 5px;
                 background-color: $main-color;
             }
 
@@ -76,7 +81,7 @@
             position: fixed;
             bottom: 0;
             left: 0;
-            height: 5rem;
+            height: 8rem;
             width: 100%;
             background-color: $body-bg;
             padding: 0 2rem;

@@ -13,7 +13,7 @@ const VideoList = props => {
     useEffect(() => {
         const getVideos = async () => {
             const res = await tmdbApi.getVideos(category, props.id);
-            setVideos(res.results.slice(0, 5));
+            setVideos(res.results.slice(0, 1));
         }
         getVideos();
     }, [category, props.id]);
@@ -36,7 +36,7 @@ const Video = props => {
     const iframeRef = useRef(null);
 
     useEffect(() => {
-        const height = iframeRef.current.offsetWidth * 9 / 16 + 'px';
+        const height = iframeRef.current.offsetWidth * 6 / 12 + 'px';
         iframeRef.current.setAttribute('height', height);
     }, []);
 
@@ -48,8 +48,9 @@ const Video = props => {
             <iframe
                 src={`https://www.youtube.com/embed/${item.key}`}
                 ref={iframeRef}
-                width="100%"
+                width="50%"
                 title="video"
+           
             ></iframe>
         </div>
     )
