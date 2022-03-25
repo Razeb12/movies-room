@@ -8,7 +8,8 @@ export const category = {
 export const movieType = {
     upcoming: 'upcoming',
     popular: 'popular',
-    top_rated: 'top_rated'
+    top_rated: 'top_rated',
+    now_playing: 'now_playing'
 }
 
 export const tvType = {

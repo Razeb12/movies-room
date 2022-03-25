@@ -26,6 +26,18 @@ const Home = () => {
                     </div>
                     <MovieList category={category.movie} type={movieType.popular}/>
                 </div>
+                <div className="section mb-3">
+                    <div className="section__header mb-2">
+                        <h1>Now Playing</h1>
+                        <Link to="/movie">
+                            {/* <OutlineButton className="small">View more</OutlineButton> */}
+                            <Button>View More</Button>
+                            
+                        </Link>
+                    </div>
+                    <MovieList category={category.movie} type={movieType.now_playing}/>
+                </div>
+                
 
                 <div className="section mb-3">
                     <div className="section__header mb-2">
