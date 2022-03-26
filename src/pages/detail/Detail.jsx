@@ -30,6 +30,7 @@ const Detail = () => {
             {
                 item && (
                     <>
+                    
                         <div className="banner" style={{backgroundImage: `url(${apiConfig.originalImage(item.backdrop_path || item.poster_path)})`}}></div>
                         <div className="mb-3 movie-content container">
                             <div className="movie-content__poster">
